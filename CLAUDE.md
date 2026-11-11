@@ -63,7 +63,14 @@ Thunderbird and KMail are the feature lodestar. Their sources are checked out lo
 
 The engineering skills (`wayfinder`, `grilling`, `domain-modeling`, `research`, `prototype`,
 `tdd`, `to-spec`, `to-tickets` and the rest) come from the globally installed `mattpocock-skills`
-plugin; their per-repo configuration lives in `docs/agents/`, see below.
+plugin; their per-repo configuration lives in `docs/agents/`, see below. Vendored in
+`.claude/skills/`:
+
+| Skill                            | Use when                          |
+| -------------------------------- | --------------------------------- |
+| `tanstack-query-best-practices`  | Data fetching, caching, mutations |
+| `tanstack-router-best-practices` | Routing, loaders, search params   |
+| `tanstack-table`                 | Tables and datagrids              |
 
 ## Agent skills
 
