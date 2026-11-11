@@ -34,6 +34,17 @@ Admin never sees another User's Accounts, mail or credentials. The first User of
 its Admin; there is no open sign-up.
 _Avoid_: Administrator, superuser, operator, owner
 
+**Access token**:
+A secret a User creates in Server mode so that a script or another application can use flock's
+API on the User's behalf. It has a name, may expire, is shown once, can be revoked at any time,
+and carries Scopes.
+_Avoid_: API key, password, app password (that is a provider's term), session
+
+**Scope**:
+What an Access token may do: `read` (read, search and follow events), `write` (change mail:
+mark, move, delete, tag) or `send` (send mail). A token carries one or more Scopes.
+_Avoid_: Permission, role, right
+
 **Account**:
 One mailbox at a mail provider, bundling how mail arrives and how it is sent, owned by exactly
 one User. Its Identities are the sender addresses it may send as.
@@ -112,6 +123,7 @@ _Avoid_: Color picker, theme, swatches
 ## Relationships
 
 - **Local mode** has exactly one **User**; **Server mode** has one or more, at least one of them an **Admin**.
+- A **User** in **Server mode** has zero or more **Access tokens**; Local mode has none.
 - A **User** owns zero or more **Accounts**; an **Account** belongs to exactly one **User**.
 - An **Account** has one or more **Identities** and one or more **Folders**.
 - An **Account** sits in at most one **Loft**; a Loft gathers Accounts, never Folders.
