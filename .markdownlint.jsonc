@@ -1,0 +1,29 @@
+{
+  // MD024 (no-duplicate-heading) is off for this repository.
+  //
+  // CHANGELOG.md follows Keep a Changelog 1.0.0, which requires every version section to
+  // reuse the same category headings — `### Added`, `### Changed`, `### Fixed`. Repeated
+  // headings are the mandated format here, not a mistake, so the rule only produces noise.
+  "MD024": false,
+
+  // MD013 (line-length) is on at 100 columns, the width the prose in this repository is
+  // already written to.
+  //
+  // Tables, fenced code blocks and headings are exempt: a Markdown table row cannot be
+  // wrapped without breaking the table, a code block reproduces source that owns its own
+  // formatting, and a heading is a single line by definition — an ADR's title is its
+  // decision in one sentence.
+  "MD013": {
+    "line_length": 100,
+    "tables": false,
+    "code_blocks": false,
+    "headings": false
+  },
+
+  // MD029 (ol-prefix) is off for this repository.
+  //
+  // The user stories in docs/spec/v1.md are numbered once across all their subsections, so
+  // every story keeps a unique, stable number. The rule demands that every list restart at
+  // 1, which would give several stories the same number.
+  "MD029": false
+}
