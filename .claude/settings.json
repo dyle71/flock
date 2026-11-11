@@ -28,7 +28,14 @@
       "Bash(mkdir:*)",
       "Bash(cd:*)",
       "Read(./.env.sample)",
-      "Read(./.env.test)"
+      "Read(./.env.test)",
+      "Bash(cargo build:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo clippy:*)",
+      "Bash(cargo fmt:*)",
+      "Bash(cargo tree:*)",
+      "Bash(cargo metadata:*)"
     ],
     "ask": [
       "Bash(rm:*)",
@@ -40,7 +47,11 @@
       "Bash(bunx:*)",
       "Bash(bun install)",
       "Bash(bun add:*)",
-      "Bash(bun remove:*)"
+      "Bash(bun remove:*)",
+      "Bash(cargo add:*)",
+      "Bash(cargo remove:*)",
+      "Bash(cargo install:*)",
+      "Bash(cargo update:*)"
     ],
     "deny": [
       "Bash(git commit:*)",

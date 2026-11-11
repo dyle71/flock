@@ -17,6 +17,23 @@ The person who owns Accounts in flock and sees them. In the local runtime mode t
 one User; in server mode there are many, and none sees another's Accounts.
 _Avoid_: Owner, member, customer
 
+**Local mode**:
+The runtime mode in which flock runs on one computer for exactly one User, inside the desktop
+app, without signing in. Nothing but that desktop app talks to it; it syncs while the desktop
+app runs, also with its window closed. The default.
+_Avoid_: Offline mode, desktop mode, standalone
+
+**Server mode**:
+The runtime mode in which flock runs as a server for one or more Users who sign in, from a
+browser or from the desktop app. The only way to use flock in a browser.
+_Avoid_: Hosted mode, cloud, multi-user mode
+
+**Admin**:
+A User in Server mode who invites, suspends and deletes Users and sees the server's state. An
+Admin never sees another User's Accounts, mail or credentials. The first User of a server is
+its Admin; there is no open sign-up.
+_Avoid_: Administrator, superuser, operator, owner
+
 **Account**:
 One mailbox at a mail provider, bundling how mail arrives and how it is sent, owned by exactly
 one User. Its Identities are the sender addresses it may send as.
@@ -94,6 +111,7 @@ _Avoid_: Color picker, theme, swatches
 
 ## Relationships
 
+- **Local mode** has exactly one **User**; **Server mode** has one or more, at least one of them an **Admin**.
 - A **User** owns zero or more **Accounts**; an **Account** belongs to exactly one **User**.
 - An **Account** has one or more **Identities** and one or more **Folders**.
 - An **Account** sits in at most one **Loft**; a Loft gathers Accounts, never Folders.
