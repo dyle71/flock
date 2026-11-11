@@ -35,10 +35,21 @@ settled the runtime modes, the repository layout and the Rust and TypeScript too
 
 ## Ports
 
-Not assigned yet. The port series is decided on the wayfinder map; it must not collide with the
-sibling projects under headcode.space (klicker.ing uses 3500–3519).
+The development services occupy one series, 3800–3819, so nothing collides with the sibling
+projects under headcode.space (bywyd 31xx, digidog 32xx, hemayat 33xx, klicker.ing 35xx). The
+compose file is the source of truth once it exists; this table is the plan it implements.
 
 An agent never starts, stops or restarts a development service.
+
+| Port | Development service                    |
+| ---- | -------------------------------------- |
+| 3800 | the flock backend in Server mode (dev) |
+| 3801 | the Vite dev server                    |
+| 3802 | Stalwart (dev mail server), SMTP       |
+| 3803 | Stalwart, IMAP                         |
+| 3804 | Stalwart, POP3                         |
+| 3805 | Stalwart, web admin                    |
+|      | 3806–3819 free                         |
 
 ## Architecture decisions
 
