@@ -28,6 +28,12 @@ The runtime mode in which flock runs as a server for one or more Users who sign 
 browser or from the desktop app. The only way to use flock in a browser.
 _Avoid_: Hosted mode, cloud, multi-user mode
 
+**Master password**:
+A password a User may set in Local mode that guards the stored sign-in data of all their
+Accounts. Until it is entered after a start, mail already stored stays readable but no Account
+syncs or sends. Forgetting it loses only that sign-in data; the mail stays. Server mode has none.
+_Avoid_: Primary password, PIN, passphrase, unlock code
+
 **Admin**:
 A User in Server mode who invites, suspends and deletes Users and sees the server's state. An
 Admin never sees another User's Accounts, mail or credentials. The first User of a server is
